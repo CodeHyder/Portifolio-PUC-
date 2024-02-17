@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Browser</title>
+</head>
+
+<body>
+    <!-- <main>
+        <header>
+            <div class="close-area"></div>
+            <input placeholder="https://..." value="https://mariosouto.com">
+        </header>
+
+        <iframe src="https://mariosouto.com"></iframe>
+    </main> -->
+
+    <script>
+        console.log('Fila Queue');
+        // Qualquer tipo de dado
+        // Fila: Chega uma atrás da outra, ordem importa 
+        // Quem entra primeiro, sai primeiro
+
+        var fila = [
+            'script.js',
+            'style.css',
+            'imagem.png'
+        ];
+        // Adiciona alguém na fila
+        fila.push('Doguinho.png');
+        //Remove o primeiro da fila
+        fila.shift();
+        // ========================================
+        // Receita para criar fila
+        // ========================================
+        // - enqueue = enfileirar
+        // - dequeue = desenfileirar
+
+        class Queue {
+            constructor() {
+                this.data = [];
+            }
+            print() {
+                console.log(this.data)
+            }
+            enqueue(item) {
+                this.data.push(item)
+            }
+
+            dequeue() {
+                 this.data.shift();
+            }
+        }
+        
+        var requests = new Queue();
+        requests.print();
+        requests.enqueue('scripts.js');
+        requests.dequeue();
+        requests.enqueue('style.css');
+        requests.enqueue('imagem.png');
+        requests.enqueue('doguinho1.png');
+    </script>
+</body>
+
+</html>
